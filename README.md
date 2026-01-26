@@ -57,8 +57,19 @@ pwsh ./画像連結.ps1
 # PowerShell 5.1 の場合
 powershell ./画像連結.ps1
 ```
-```ショートカットで使用する場合
+```
+#ショートカットで使用する場合
 pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
 ```
 
+## ライセンス
+本プロジェクトは MIT License のもとで公開されています。
 
+## 注意事項
+- ImageMagick のインストールが必須です
+
+- 画像は 2 枚ずつ処理されます
+
+- 奇数枚の場合、最後の 1 枚はスキップされます
+
+- 連結処理は magick montage を使用しています
