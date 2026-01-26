@@ -9,7 +9,7 @@ Windows 11 + PowerShell 7.5.4 で動作確認済みですで、5.1でも動作�
 
 ![ImageMagick](https://github.com/user-attachments/assets/adb7da8e-002d-4d7f-aeaf-068a0919de25 "アプリウィンドウ")
 ---
-## 本アプリはPowerShell と WPFで動作します、別途ランタイム等のインストールは必要ありません。
+## 本アプリはPowerShell と WPFで動作します、.NET Frameworkが動作する環境であれば別途ランタイム等のインストールは必要ありません。
 ImageMagickをインストールし、コマンドから使用できるようにしてください。
 
 ---
@@ -60,4 +60,5 @@ powershell ./画像連結.ps1
 ```ショートカットで使用する場合
 pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
 ```
+
 
