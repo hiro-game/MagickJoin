@@ -5,7 +5,7 @@
 ---
 ## このアプリについて
 本アプリは **Microsoft Copilot によって作成された Copilot 製アプリ**です。  
-Windows 11 + PowerShell 7.5.4 で動作確認済みですが、5.1でも動作します。
+Windows 11 + PowerShell 7.5.4 で動作確認済みですで、5.1でも動作します。
 
 ![ImageMagick](https://github.com/user-attachments/assets/adb7da8e-002d-4d7f-aeaf-068a0919de25 "アプリウィンドウ")
 ---
@@ -60,3 +60,4 @@ powershell ./画像連結.ps1
 ```ショートカットで使用する場合
 pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
 ```
+
