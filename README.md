@@ -7,7 +7,7 @@
 本アプリは **Microsoft Copilot によって作成された Copilot 製アプリ**です。  
 Windows 11 + PowerShell 7.5.4 で動作確認済みですで、5.1でも動作します。
 
-![ImageMagick](https://github.com/user-attachments/assets/adb7da8e-002d-4d7f-aeaf-068a0919de25 "アプリウィンドウ")
+![MagickJoin](https://github.com/user-attachments/assets/adb7da8e-002d-4d7f-aeaf-068a0919de25 "アプリウィンドウ")
 ---
 ## 本アプリはPowerShell と WPFで動作します、.NET Frameworkが動作する環境であれば別途ランタイム等のインストールは必要ありません。
 ImageMagickをインストールし、コマンドから使用できるようにしてください。
@@ -73,3 +73,4 @@ pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
 - 奇数枚の場合、最後の 1 枚はスキップされます
 
 - 連結処理は magick montage を使用しています
+
