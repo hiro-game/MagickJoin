@@ -1,6 +1,7 @@
 # MagickJoin
 
 当アプリは、ImageMagickのフロントエンドです。
+2枚の画像を上下左右に連結するためだけのアプリです。
 
 ---
 ## このアプリについて
@@ -73,4 +74,5 @@ pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
 - 奇数枚の場合、最後の 1 枚はスキップされます
 
 - 連結処理は magick montage を使用しています
+
 
