@@ -1,4 +1,4 @@
-﻿# Requires -Version 5.1
+# Requires -Version 5.1
 Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
 
 # ImageMagick 実行ファイル
@@ -34,7 +34,7 @@ $xaml = @"
 
                 <Button x:Name="PinButton"
                         Grid.Column="1"
-                        Content="📍"
+                        Content="📌"
                         Width="32" Height="32"
                         Background="Transparent"
                         BorderThickness="0"
@@ -113,11 +113,11 @@ $pinButton = $window.FindName("PinButton")
 $pinButton.Add_Click({
     if ($window.Topmost) {
         $window.Topmost = $false
-        $pinButton.Content = "📍"
+        $pinButton.Content = "📌"
     }
     else {
         $window.Topmost = $true
-        $pinButton.Content = "📌"
+        $pinButton.Content = "📍"
     }
 })
 
