@@ -1,4 +1,4 @@
-# Requires -Version 5.1
+﻿# Requires -Version 5.1
 Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
 
 # ImageMagick 実行ファイル
@@ -194,10 +194,12 @@ function Get-ValidImageFilesFromDrop {
     $files = @()
 
     foreach ($p in $Paths) {
-        if (Test-Path $p -PathType Container) {
-            $files += Get-ChildItem -Path $p -File
+        if (Test-Path -LiteralPath $p -PathType Container) {
+            $files += [System.IO.Directory]::EnumerateFiles($p) | ForEach-Object {
+                Get-Item -LiteralPath $_
+            }
         }
-        elseif (Test-Path $p -PathType Leaf) {
+        elseif (Test-Path -LiteralPath $p -PathType Leaf) {
             $files += Get-Item -LiteralPath $p
         }
     }
@@ -208,11 +210,11 @@ function Get-ValidImageFilesFromDrop {
         $result = Test-ImageByIdentify -Path $f.FullName
 
         if ($result[0] -eq $true) {
-            Add-Log "対象画像: $($f.FullName)" "info"
+            Add-Log "対象画像: $($f.FullName)"
             $valid += $f
         }
         else {
-            Add-Log "非対象(identify失敗): $($f.FullName)" "error"
+            Add-Log "非対象(identify失敗): $($f.FullName)"
         }
     }
 
