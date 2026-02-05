@@ -253,8 +253,18 @@ function Merge-Images {
 
         $folder = $f1.DirectoryName
         $processDir = Join-Path $folder "Processed"
-
-        if (-not (Test-Path $processDir)) {
+        
+        # Processed が存在する場合、フォルダかどうか確認
+        if (Test-Path -LiteralPath $processDir) {
+            $item = Get-Item -LiteralPath $processDir
+            if (-not $item.PSIsContainer) {
+                # ファイルだった場合は削除してフォルダを作り直す
+                Remove-Item -LiteralPath $processDir -Force
+                New-Item -ItemType Directory -Path $processDir | Out-Null
+            }
+        }
+        else {
+            # 存在しない場合はフォルダを作成
             New-Item -ItemType Directory -Path $processDir | Out-Null
         }
 
