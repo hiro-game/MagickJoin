@@ -54,13 +54,13 @@ ImageMagickをインストールし、コマンドから使用できるように
 4. PowerShell 7 で起動
 
 ```powershell
-pwsh ./画像連結.ps1
+pwsh ./MagickJoin.ps1
 # PowerShell 5.1 の場合
-powershell ./画像連結.ps1
+powershell ./MagickJoin.ps1
 ```
 ```
 #ショートカットで使用する場合
-pwsh -WindowStyle Hidden -ExecutionPolicy Bypass -File .\画像連結.ps1
+pwsh  -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File .\MagickJoin.ps1
 ```
 
 ## ライセンス
