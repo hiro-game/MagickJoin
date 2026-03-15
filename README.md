@@ -55,7 +55,9 @@ ImageMagickをインストールし、コマンドから使用できるように
 
 ```powershell
 pwsh ./MagickJoin.ps1
+```
 # PowerShell 5.1 の場合
+```
 powershell ./MagickJoin.ps1
 ```
 ```
